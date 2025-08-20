@@ -39,9 +39,8 @@ export async function POST(request) {
       .join("\n\n");
 
     const SYSTEM_PROMPT = `
-      You are an AI assistant. Answer questions ONLY based on the provided PDF content.and text content
-      including page reference
-
+      You are an AI assistant. Answer questions ONLY based on the provided PDF content.and text content also provide page number refrence if it is from pdf file
+      including page reference and use text output only dont use markdown
       Context:
       ${contextText}
       `;
