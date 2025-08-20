@@ -11,7 +11,7 @@ GitHub Repo 👉 [https://github.com/dev-d-25/ChaiBookLM](https://github.com/dev
 
 ## ✨ Features
 
-- 📂 **Upload PDFs** and index them into QdrantDB.  
+- 📂 **Upload PDFs** and index them into QdrantDB. (PDF MAX SIZE - 5 MB)
 - 📝 **Add text notes** directly (indexed as well).  
 - 🤖 **Chat with your documents** using Google Generative AI.  
 - ⚡ **Semantic search** with embeddings for fast retrieval.  
