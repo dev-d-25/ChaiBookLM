@@ -1,0 +1,6 @@
+{
+  "/api/upload/route": "app/api/upload/route.js",
+  "/api/index/route": "app/api/index/route.js",
+  "/page": "app/page.js",
+  "/api/chat/route": "app/api/chat/route.js"
+}
