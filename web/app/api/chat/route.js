@@ -28,7 +28,7 @@ export async function POST(request) {
       {
         url: process.env.QDRANT_URL, // updated
         collectionName: "notebookllm",
-        apiKey: process.env.QDRANT_API_KEY
+        apiKey: process.env.QDRANT_API_KEY,
       }
     );
     const vectorRetriever = vectorStore.asRetriever({ k: 3 });
@@ -39,7 +39,8 @@ export async function POST(request) {
       .join("\n\n");
 
     const SYSTEM_PROMPT = `
-You are an AI assistant. Answer questions ONLY based on the provided PDF content.
+You are an AI assistant. Answer questions ONLY based on the provided PDF content.and text content
+including page reference
 
 Context:
 ${contextText}
