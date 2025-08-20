@@ -1,88 +1,65 @@
-ChaiBookLM
+# ChaiBookLM
 
-ChaiBookLM is an AI-powered document chat application that allows users to upload, index, and interact with their documents through a conversational interface. Built with Next.js, Tailwind CSS, and integrated with QdrantDB for efficient vector-based search, ChaiBookLM offers an intuitive way to extract insights from your documents.
+ChaiBookLM is an **AI-powered document chat application** that allows users to upload, index, and interact with their documents through a conversational interface.  
 
-🚀 Live Demo
+Built with **Next.js, Tailwind CSS, Google Generative AI Embeddings, and QdrantDB**, it enables fast semantic search and retrieval-augmented chat over your PDFs and text notes.
 
-Experience the application live at: https://chai-book-lm.vercel.app/
+Live Demo 👉 [https://chai-book-lm.vercel.app/](https://chai-book-lm.vercel.app/)  
+GitHub Repo 👉 [https://github.com/dev-d-25/ChaiBookLM](https://github.com/dev-d-25/ChaiBookLM)
 
-📦 Features
+---
 
-Document Upload: Upload PDF or TXT files.
+## ✨ Features
 
-Text Input: Paste long-form text directly into the application.
+- 📂 **Upload PDFs** and index them into QdrantDB.  
+- 📝 **Add text notes** directly (indexed as well).  
+- 🤖 **Chat with your documents** using Google Generative AI.  
+- ⚡ **Semantic search** with embeddings for fast retrieval.  
+- 🎨 **Frontend built with Next.js + Tailwind CSS** for a clean, responsive UI.  
+- ☁️ **Deployed on Vercel** with cloud-hosted QdrantDB.
 
-Indexing: Automatically indexes uploaded documents or pasted text for efficient searching.
+---
 
-Chat Interface: Engage in a conversation with your documents to extract information.
+## Tech Stack
 
-Source Management: View and manage indexed sources in the sidebar.
+- Frontend: Next.js, Tailwind CSS
 
-Responsive Design: Optimized for both desktop and mobile devices.
+- Embeddings: Google Generative AI
 
-🛠️ Technologies Used
+- Vector DB: QdrantDB
 
-Frontend: Next.js, React, Tailwind CSS
+- Deployment: Vercel
 
-Backend: Node.js
+## 🚀 Getting Started
 
-Database: QdrantDB (hosted on AWS)
-
-Deployment: Vercel
-
-🔧 Setup Instructions
-Prerequisites
-
-Node.js (v16 or higher)
-
-npm or yarn
-
-QdrantDB account (for vector search functionality)
-
-Installation
-
-Clone the repository:
-
+### 1. Clone the Repository
+```bash
 git clone https://github.com/dev-d-25/ChaiBookLM.git
 cd ChaiBookLM
+```
 
-
-Install dependencies:
-
+2. Install Dependencies
+ ```bash
 npm install
+```
 
+4. Setup Environment Variables
 
-Create a .env file in the root directory and add your QdrantDB API key:
+Create a .env.local file in the root of your project:
 
-QDRANT_API_KEY=your_qdrant_api_key
+GEMINI_API_KEY=your_google_gemini_api_key
+QDRANT_URL=https://YOUR-QDRANT-ENDPOINT:6333
+QDRANT_API_KEY=your_qdrant_api_key  
 
-
-Run the development server:
-
+4. Run Development Server
 npm run dev
 
+Visit http://localhost:3000
 
-The application will be available at http://localhost:3000
-.
+🛠 API Endpoints
+/api/upload -> Handles file uploads (PDFs).
 
-🧪 Usage
+/api/index -> Indexes PDFs or text into QdrantDB.
 
-Upload a Document: Click on the "Upload" button in the sidebar to select a file from your device.
+/api/chat -> Handles user chat queries, retrieves relevant chunks from Qdrant, and generates AI-powered responses.
 
-Enter Text: Switch to the "Text" tab to paste your content directly.
-
-Process Content: Click on the "Process" button to upload or process the content.
-
-Index Content: After processing, click on "Index Content" to make the document searchable.
-
-Chat: Ask questions related to the uploaded document in the chat interface.
-
-📄 API Endpoints
-
-POST /api/upload: Uploads a document file.
-
-POST /api/process: Processes the uploaded document or pasted text.
-
-POST /api/index: Indexes the processed content in QdrantDB.
-
-POST /api/chat: Sends a query to the indexed content and retrieves a response.
