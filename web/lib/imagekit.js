@@ -1,4 +1,4 @@
-import ImageKit from "imagekitio";
+import ImageKit from "imagekit";
 
 
 export const imagekit = new ImageKit({
