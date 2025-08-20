@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"; 
 import { imagekit } from "../../../lib/imagekit";
+export const runtime = "nodejs";
 
 export async function POST(req) {
   console.log("📂 [Upload API] File upload started...");

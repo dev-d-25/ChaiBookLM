@@ -1,4 +1,5 @@
-import ImageKit from "imagekit";
+import ImageKit from "imagekitio";
+
 
 export const imagekit = new ImageKit({
   publicKey: process.env.IMAGEKIT_PUBLIC_KEY,
