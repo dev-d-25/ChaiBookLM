@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server"; 
-import { imagekit } from "../../../lib/imagekit";
+import { imagekit } from "@lib/imagekit";
 export const runtime = "nodejs";
 
 export async function POST(req) {
